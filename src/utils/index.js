@@ -189,17 +189,17 @@ export const AvailableSizes = [
 ];
 
 export const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
+  apiKey: "AIzaSyDq1P4W6oMACWX6thaCWK9-_x4XO0j1zlQ",
+  authDomain: "frishop-c915c.firebaseapp.com",
+  projectId: "frishop-c915c",
+  storageBucket: "frishop-c915c.appspot.com",
+  messagingSenderId: "840411845254",
+  appId: "1:840411845254:web:815bba5b4470a64103b707",
   measurementId: "G-J9XHT5EWJ6"
 };
 
 export const firebaseStroageURL =
-  "";
+  "gs://frishop-c915c.appspot.com/";
 
 export const addNewAddressFormControls = [
   {
