@@ -25,7 +25,7 @@ export async function POST(req) {
     console.log(error);
     return NextResponse.json({
       success: false,
-      message: error.details[0].message,
+      message: error.details.map((detail) => detail.message),
     });
   }
 
@@ -53,11 +53,11 @@ export async function POST(req) {
         return NextResponse.json({
           success: true,
           message: "Account created successfully.",
-        });
+        },{ status: 201 });
       }
     }
   } catch (error) {
-    console.log("Error while new user registration. Please try again");
+    console.error('Error during user creation:', error);
 
     return NextResponse.json({
       success: false,

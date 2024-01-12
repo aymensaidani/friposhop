@@ -6,14 +6,14 @@ const configOptions = {
 };
 
 const connectToDB = async () => {
-  const connectionUrl = "";
+  const connectionUrl = "mongodb+srv://aymensaidany:2wWhn5WWDr7rUdp9@cluster0.vdat2iz.mongodb.net/";
 
-  mongoose
-    .connect(connectionUrl, configOptions)
-    .then(() => console.log("Frishop database connected successfully!"))
-    .catch((err) =>
-      console.log(`Getting Error from DB connection ${err.message}`)
-    );
+  try {
+    await mongoose.connect(connectionUrl, configOptions);
+    console.log("Frishop database connected successfully!");
+  } catch (err) {
+    console.error(`Getting Error from DB connection ${err.message}`);
+  }
 };
 
 export default connectToDB;
