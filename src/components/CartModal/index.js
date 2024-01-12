@@ -145,6 +145,7 @@ export default function CartModal() {
             type="button"
             onClick={() => {
               router.push("/cart");
+              router.refresh()
               setShowCartModal(false);
             }}
             className="mt-1.5 w-full inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
@@ -156,6 +157,8 @@ export default function CartModal() {
             type="button"
             onClick={() => {
               router.push("/checkout");
+              router.refresh()
+
               setShowCartModal(false);
             }}
             className="mt-1.5 w-full inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide disabled:opacity-50"
